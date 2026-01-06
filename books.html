@@ -1,259 +1,277 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>CWB</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <style>
-        .navbar-inner {
-            background-image: url("images/datavis_header2.png") !important;
-            background-repeat: no-repeat;
-            /*margin-top: -20px;
+      .navbar-inner {
+        background-image: url("images/datavis_header2.png") !important;
+        background-repeat: no-repeat;
+        /*margin-top: -20px;
             margin-left: -20px;*/
-            height: 150px;
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-        
-        .vertical-center {
-            margin: 0;
-            position: absolute;
-            top: 40%;
-            -ms-transform: translateY(-60%);
-            transform: translateY(-60%);
-        }
-        
-        .navbar-brand {
-            font-size: 28px;
-            vertical-align: middle;
-            padding: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        
-        .navbar-nav {
-            font-size: 20px;
-            vertical-align: middle;
-            padding: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        
-        .nav-link {
-            margin-left: 15px;
-        }
-        
-        .col {
-            padding: 5px;
-            margin: 20px;
-        }
-        /*.container-fluid {
+        height: 150px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        -ms-transform: translateY(-60%);
+        transform: translateY(-60%);
+      }
+
+      .navbar-brand {
+        font-size: 28px;
+        vertical-align: middle;
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .navbar-nav {
+        font-size: 20px;
+        vertical-align: middle;
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .nav-link {
+        margin-left: 15px;
+      }
+
+      .col {
+        padding: 5px;
+        margin: 20px;
+      }
+      /*.container-fluid {
             position: relative;
             margin-top: 130px;
         }*/
-        
-        h1 {
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-        }
-        
-        a[href="https://github.com/cbrownley"],
-        a[href="https://www.linkedin.com/in/clintonbrownley/"] {
-            margin-right: 10px;
-        }
-        
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-        
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-        
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-        
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-        
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-        
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        /* GLOBAL STYLES
--------------------------------------------------- */
-        /* Padding below the footer and lighter body text */
-        
-        body {
-            /*padding-top: 3rem;
-            padding-bottom: 3rem;*/
-            color: #5a5a5a;
-        }
-        /* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-        /* Carousel base class */
-        
-        .carousel {
-            margin-bottom: 4rem;
-        }
-        /* Since positioning the image, we need to help out the caption */
-        
-        .carousel-caption {
-            bottom: 3rem;
-            /*z-index: 10;*/
-            font-weight: bold;
-            color: #5a5a5a;
-        }
-        
-        .books {
-            font-size: 175px;
-            z-index: 100;
-            opacity: 0;
-        }
-        /* Declare heights because of positioning of img element */
-        
-        .carousel-item {
-            height: 32rem;
-        }
-        
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            /* cover, contain, fill */
-        }
-        
-        .carousel-control-prev-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23282828' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-        }
-        
-        .carousel-control-next-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23282828' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-        }
-        /* MARKETING CONTENT
--------------------------------------------------- */
-        /* Center align the text within the three columns below the carousel */
-        
-        .marketing-title {
-            margin-bottom: 75px;
-            /*1.5rem;*/
-            text-align: left;
-        }
-        
-        .marketing .col-lg-4 {
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        /* rtl:begin:ignore */
-        
-        .marketing .col-lg-4 p {
-            margin-right: .75rem;
-            margin-left: .75rem;
-        }
-        /* rtl:end:ignore */
-        /* Featurettes
-------------------------- */
-        
-        .featurette-divider {
-            margin: 5rem 0;
-            /* Space out the Bootstrap <hr> more */
-        }
-        /* Thin out the marketing headings */
-        /* rtl:begin:remove */
-        
-        .featurette-heading {
-            letter-spacing: -.05rem;
-        }
-        /* rtl:end:remove */
-        /* RESPONSIVE CSS
--------------------------------------------------- */
-        
-        @media (min-width: 40em) {
-            /* Bump up size of carousel content */
-            .carousel-caption p {
-                margin-bottom: 1.25rem;
-                font-size: 1.25rem;
-                line-height: 1.4;
-            }
-            .featurette-heading {
-                font-size: 50px;
-            }
-        }
-        
-        @media (min-width: 62em) {
-            .featurette-heading {
-                margin-top: 7rem;
-            }
-        }
-    </style>
-</head>
 
-<body>
+      h1 {
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      a[href="https://github.com/cbrownley"],
+        a[href="https://www.linkedin.com/in/clintonbrownley/"]
+      {
+        margin-right: 10px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      /* GLOBAL STYLES
+-------------------------------------------------- */
+      /* Padding below the footer and lighter body text */
+
+      body {
+        /*padding-top: 3rem;
+            padding-bottom: 3rem;*/
+        color: #5a5a5a;
+      }
+      /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+      /* Carousel base class */
+
+      .carousel {
+        margin-bottom: 4rem;
+      }
+      /* Since positioning the image, we need to help out the caption */
+
+      .carousel-caption {
+        bottom: 3rem;
+        /*z-index: 10;*/
+        font-weight: bold;
+        color: #5a5a5a;
+      }
+
+      .books {
+        font-size: 175px;
+        z-index: 100;
+        opacity: 0;
+      }
+      /* Declare heights because of positioning of img element */
+
+      .carousel-item {
+        height: 32rem;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* cover, contain, fill */
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23282828' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+      }
+
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23282828' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+      }
+      /* MARKETING CONTENT
+-------------------------------------------------- */
+      /* Center align the text within the three columns below the carousel */
+
+      .marketing-title {
+        margin-bottom: 75px;
+        /*1.5rem;*/
+        text-align: left;
+      }
+
+      .marketing .col-lg-4 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      /* rtl:begin:ignore */
+
+      .marketing .col-lg-4 p {
+        margin-right: 0.75rem;
+        margin-left: 0.75rem;
+      }
+      /* rtl:end:ignore */
+      /* Featurettes
+------------------------- */
+
+      .featurette-divider {
+        margin: 5rem 0;
+        /* Space out the Bootstrap <hr> more */
+      }
+      /* Thin out the marketing headings */
+      /* rtl:begin:remove */
+
+      .featurette-heading {
+        letter-spacing: -0.05rem;
+      }
+      /* rtl:end:remove */
+      /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+      @media (min-width: 40em) {
+        /* Bump up size of carousel content */
+        .carousel-caption p {
+          margin-bottom: 1.25rem;
+          font-size: 1.25rem;
+          line-height: 1.4;
+        }
+        .featurette-heading {
+          font-size: 50px;
+        }
+      }
+
+      @media (min-width: 62em) {
+        .featurette-heading {
+          margin-top: 7rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
     <div>
-        <nav class="navbar-inner"></nav>
+      <nav class="navbar-inner"></nav>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand navbar-text" href="index.html"> Clinton Brownley
-                <!-- <img src="./datavis_images/galton.jpeg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top"> Clinton Brownley -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="teaching.html">Teaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="workshops.html">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="books.html">Books</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
+      <div class="container-fluid">
+        <a class="navbar-brand navbar-text" href="index.html">
+          Clinton Brownley
+          <!-- <img src="./datavis_images/galton.jpeg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top"> Clinton Brownley -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="teaching.html">Teaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="workshops.html">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Books</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Topics
           </a>
@@ -263,129 +281,323 @@
                             <li><a class="dropdown-item" href="visualization.html">Visualization</a></li>
                         </ul>
                     </li> -->
-                </ul>
-            </div>
-
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-                <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/cbrownley" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><title>GitHub</title><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                        <small class="d-lg-none ms-2">GitHub</small>
-                    </a>
-                </li>
-
-                <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://www.linkedin.com/in/clintonbrownley/" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><title>LinkedIn</title><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-                        <small class="d-lg-none ms-2">LinkedIn</small>
-                    </a>
-                </li>
-
-                <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/clintonbrownley" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16"><title>Twitter</title><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg>
-                        <small class="d-lg-none ms-2">Twitter</small>
-                    </a>
-                </li>
-
-                <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" rel="me" href="https://bayes.club/@clintonbrownley" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><title>Mastodon</title><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/></svg>
-                        <small class="d-lg-none ms-2">Mastodon</small>
-                    </a>
-                </li>
-
-            </ul>
+          </ul>
         </div>
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-lg-auto">
+            <a
+              class="nav-link py-2 px-0 px-lg-2"
+              href="https://github.com/cbrownley"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+              <small class="d-lg-none ms-2">GitHub</small>
+            </a>
+          </li>
+
+          <li class="nav-item col-6 col-lg-auto">
+            <a
+              class="nav-link py-2 px-0 px-lg-2"
+              href="https://www.linkedin.com/in/clintonbrownley/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <title>LinkedIn</title>
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+              <small class="d-lg-none ms-2">LinkedIn</small>
+            </a>
+          </li>
+
+          <li class="nav-item col-6 col-lg-auto">
+            <a
+              class="nav-link py-2 px-0 px-lg-2"
+              href="https://twitter.com/clintonbrownley"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-twitter"
+                viewBox="0 0 16 16"
+              >
+                <title>Twitter</title>
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                />
+              </svg>
+              <small class="d-lg-none ms-2">Twitter</small>
+            </a>
+          </li>
+
+          <li class="nav-item col-6 col-lg-auto">
+            <a
+              class="nav-link py-2 px-0 px-lg-2"
+              rel="me"
+              href="https://bayes.club/@clintonbrownley"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-mastodon"
+                viewBox="0 0 16 16"
+              >
+                <title>Mastodon</title>
+                <path
+                  d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
+                />
+              </svg>
+              <small class="d-lg-none ms-2">Mastodon</small>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <main>
-        <!-- START THE FEATURETTES -->
-        <div class="container marketing">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1"><a href="https://www.amazon.com/Foundations-Analytics-Python-Non-Programmer-Hacker/dp/1491922532" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Foundations for Analytics<br>with Python</a><span class="text-muted"></span></h2>
-                    <p class="lead">If you're like many of Excel's 750 million users, you want to do more with your data—like repeating similar analyses over hundreds of files, or combining data in many files for analysis at one time. This practical guide shows ambitious
-                        non-programmers how to automate and scale the processing and analysis of data in different formats—by using Python.</p>
-                </div>
-                <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350" height="550" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <!-- <title>Placeholder</title>
+      <!-- START THE FEATURETTES -->
+      <div class="container marketing">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              <a
+                href="https://www.amazon.com/Foundations-Analytics-Python-Non-Programmer-Hacker/dp/1491922532"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+                >Foundations for Analytics<br />with Python</a
+              ><span class="text-muted"></span>
+            </h2>
+            <p class="lead">
+              If you're like many of Excel's 750 million users, you want to do
+              more with your data—like repeating similar analyses over hundreds
+              of files, or combining data in many files for analysis at one
+              time. This practical guide shows ambitious non-programmers how to
+              automate and scale the processing and analysis of data in
+              different formats—by using Python.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="350"
+              height="550"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <!-- <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="#eee"/>
                         <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
-                        <image href="./images/foundations_analytics_python.jpg" width="350" height="550" ></image>
-                    </svg>
-                </div>
-            </div>
+              <image
+                href="./images/foundations_analytics_python.jpg"
+                width="350"
+                height="550"
+              ></image>
+            </svg>
+          </div>
+        </div>
 
-            <hr class="featurette-divider">
+        <hr class="featurette-divider" />
 
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1"><a href="https://www.amazon.com/Multi-Objective-Decision-Analysis-Uncertainty-Quantitative/dp/160649452X" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Multi-objective Decision Analysis</a><span class="text-muted"></span></h2>
-                    <p class="lead">Whether managing strategy, operations, or products, knowing how to make the best decision in a complex, uncertain business environment is difficult. You might be faced with multiple, competing objectives, which means making trade-offs.
-                        This book will help you face these problems. The process involves minimal overhead and is perfect for busy professionals who need a simple, structured process for making, tracking, and communicating decisions.</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <!-- <title>Placeholder</title>
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              <a
+                href="https://www.amazon.com/Multi-Objective-Decision-Analysis-Uncertainty-Quantitative/dp/160649452X"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+                >Multi-objective Decision Analysis</a
+              ><span class="text-muted"></span>
+            </h2>
+            <p class="lead">
+              Whether managing strategy, operations, or products, knowing how to
+              make the best decision in a complex, uncertain business
+              environment is difficult. You might be faced with multiple,
+              competing objectives, which means making trade-offs. This book
+              will help you face these problems. The process involves minimal
+              overhead and is perfect for busy professionals who need a simple,
+              structured process for making, tracking, and communicating
+              decisions.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="300"
+              height="500"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <!-- <title>Placeholder</title>
                         <rect width="100%" height="100%" fill="#eee"/>
                         <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
-                        <image href="./images/MODA.jpg" width="300" height="500" ></image>
-                    </svg>
-                </div>
-            </div>
+              <image href="./images/MODA.jpg" width="300" height="500"></image>
+            </svg>
+          </div>
         </div>
-        <!-- <hr class="featurette-divider"> -->
-        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- <hr class="featurette-divider"> -->
+      <!-- /END THE FEATURETTES -->
 
-        <!-- /.container -->
+      <!-- /.container -->
 
-        <!-- FOOTER -->
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <!-- <img src="./datavis_images/galton.jpeg" alt="Logo" width="36" height="36" class="d-inline-block align-text-middle"> -->
-                    <span class="mb-3 mb-md-0 text-muted">2013-2023 &copy; Clinton Brownley</span>
-                </div>
+      <!-- FOOTER -->
+      <div class="container">
+        <footer
+          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        >
+          <div class="col-md-4 d-flex align-items-center">
+            <!-- <img src="./datavis_images/galton.jpeg" alt="Logo" width="36" height="36" class="d-inline-block align-text-middle"> -->
+            <span class="mb-3 mb-md-0 text-muted"
+              >2013-2026 &copy; Clinton Brownley</span
+            >
+          </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="text-muted" href="https://github.com/cbrownley" target="_blank" rel="noopener">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><title>GitHub</title><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                            <small class="d-lg-none ms-2">GitHub</small>
-                        </a>
-                    </li>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a
+                class="text-muted"
+                href="https://github.com/cbrownley"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                <small class="d-lg-none ms-2">GitHub</small>
+              </a>
+            </li>
 
-                    <li class="ms-3">
-                        <a class="text-muted" href="https://www.linkedin.com/in/clintonbrownley/" target="_blank" rel="noopener">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><title>LinkedIn</title><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-                            <small class="d-lg-none ms-2">LinkedIn</small>
-                        </a>
-                    </li>
+            <li class="ms-3">
+              <a
+                class="text-muted"
+                href="https://www.linkedin.com/in/clintonbrownley/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                  />
+                </svg>
+                <small class="d-lg-none ms-2">LinkedIn</small>
+              </a>
+            </li>
 
-                    <li class="ms-3">
-                        <a class="text-muted" href="https://twitter.com/clintonbrownley" target="_blank" rel="noopener">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16"><title>Twitter</title><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg>
-                            <small class="d-lg-none ms-2">Twitter</small>
-                        </a>
-                    </li>
+            <li class="ms-3">
+              <a
+                class="text-muted"
+                href="https://twitter.com/clintonbrownley"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <title>Twitter</title>
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  />
+                </svg>
+                <small class="d-lg-none ms-2">Twitter</small>
+              </a>
+            </li>
 
-                    <li class="ms-3">
-                        <a class="text-muted" rel="me" href="https://bayes.club/@clintonbrownley" target="_blank" rel="noopener">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><title>Mastodon</title><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/></svg>
-                            <small class="d-lg-none ms-2">Mastodon</small>
-                        </a>
-                    </li>
-
-                </ul>
-            </footer>
-        </div>
+            <li class="ms-3">
+              <a
+                class="text-muted"
+                rel="me"
+                href="https://bayes.club/@clintonbrownley"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-mastodon"
+                  viewBox="0 0 16 16"
+                >
+                  <title>Mastodon</title>
+                  <path
+                    d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
+                  />
+                </svg>
+                <small class="d-lg-none ms-2">Mastodon</small>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </main>
 
     <script src="" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
